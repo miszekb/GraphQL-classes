@@ -1,0 +1,41 @@
+type Query {
+    hello: String!,
+    helloWithName(name: String!): String!,
+    getTweet(id: Int!): Tweet!,
+    getUser(id: Int): User,
+    getAllUsers: [User]!,
+    getAllComments: [Comment]!,
+    getTweets(limit: Int!, offset: Int!): [Tweet]!,
+}
+
+type Mutation {
+    incrementMutation(number: Int!): Int,
+    addTweet(text: String!, username: String!): Tweet,
+    removeTweet(id: Int!): Tweet,
+    likeTweet(id: Int!): Tweet,
+    commentTweet(id: Int!, comment: String!): Tweet,
+    addComment(text: String!, username: String!, tweetId: Int!): Comment
+}
+
+type Tweet {
+    id: Int!,
+    text: String!,
+    createdAt: String!,
+    user: User!,
+    likes: Int!,
+    comments: [Comment]!
+}
+
+type User {
+    id: Int!,
+    username: String!,
+    tweets: [Tweet]!
+}
+
+type Comment {
+    id: Int!,
+    text: String!,
+    createdAt: String!,
+    user: User!,
+    tweet: Tweet!
+}

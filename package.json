@@ -1,0 +1,25 @@
+{
+  "name": "graphql",
+  "version": "1.0.0",
+  "description": "Inicjalizacja projektu (`npm init`)   Zainstalowanie (`npm i --save`)   `graphql-yoga`   `nodemon`",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --ext js,graphql --watch ./src --watch ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HealthTechDevelopers/htd-qraphql-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HealthTechDevelopers/htd-qraphql-api/issues"
+  },
+  "homepage": "https://github.com/HealthTechDevelopers/htd-qraphql-api#readme",
+  "dependencies": {
+    "graphql-yoga": "^1.18.3",
+    "nodemon": "^1.19.4",
+    "pg": "^7.12.1"
+  }
+}
